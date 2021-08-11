@@ -2,7 +2,7 @@
   "name": "express-mongo-ts-boilerplate",
   "version": "1.0.0",
   "description": "Express Mongo TS Boilerplate",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "nodemon",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.4.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1"
   },
