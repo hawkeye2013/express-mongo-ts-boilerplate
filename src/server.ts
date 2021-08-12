@@ -4,14 +4,14 @@ import { RouteMethods } from './Common/Application/AppRouter/AppRouter.types';
 import { logInfo } from './utils/logger';
 import dotenv from 'dotenv';
 
-import service from './service';
-
 if (process.env.NODE_ENV === 'development') {
   dotenv.config();
 }
 
+import service from './service';
+
 const port = process.env.PORT || 8080;
 
 service.listen(port, () => {
-  logInfo(`server started at http://localhost:${port}`, 'Server.ts');
+  logInfo(`Server started at http://localhost:${port}`, 'Server.ts');
 });

@@ -10,9 +10,11 @@ export class AppRouter {
   private router: Router;
 
   constructor(options: AppRouterConstructorOptions) {
+    const { routes } = options;
+
     this.router = Router();
 
-    options.routes.forEach((route) => {
+    routes.forEach((route) => {
       this.registerRoute(route);
     });
   }

@@ -1,4 +1,5 @@
 import * as express from 'express';
+import { AppRouter } from './AppRouter';
 
 export enum RouteMethods {
   'GET',
