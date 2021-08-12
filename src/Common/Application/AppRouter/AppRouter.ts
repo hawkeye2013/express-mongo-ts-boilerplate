@@ -17,7 +17,7 @@ export class AppRouter {
     });
   }
 
-  getRouter() {
+  getNativeRouter() {
     return this.router;
   }
 
@@ -28,7 +28,20 @@ export class AppRouter {
 
         break;
 
-      // TODO:TUCKER - Add More of these here
+      case RouteMethods.POST:
+        this.router.post(route.path, route.handler);
+
+        break;
+
+      case RouteMethods.PUT:
+        this.router.put(route.path, route.handler);
+
+        break;
+
+      case RouteMethods.DELETE:
+        this.router.delete(route.path, route.handler);
+
+        break;
 
       default:
         logInfo('Unable To Determine Method');
